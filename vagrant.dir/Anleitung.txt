@@ -1,0 +1,13 @@
+cd into vagrant.dir
+
+vagrant plugin install vagrant-proxyconf
+
+vagrant up
+
+vagrant ssh rke
+
+rke up
+
+mv kube_config_cluster.yml /home/vagrant/.kube/config
+
+kubectl get nodes

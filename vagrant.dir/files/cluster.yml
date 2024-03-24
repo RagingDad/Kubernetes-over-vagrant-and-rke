@@ -1,0 +1,36 @@
+#Clusterfile
+
+#declare nodes
+nodes:
+- address: 192.168.5.3
+  user: root
+  role:
+  - controlplane
+  - etcd
+- address: 192.168.5.4
+  user: root
+  role:
+  - worker
+- address: 192.168.5.5
+  user: root
+  role:
+  - worker
+
+#declare services
+services:
+  etcd:
+    image: quay.io/coreos/etcd:latest
+  kube-api:
+    image: rancher/k8s:v1.8.3-rancher2
+  kube-controller:
+    image: rancher/k8s:v1.8.3-rancher2
+  scheduler:
+    image: rancher/k8s:v1.8.3-rancher2
+  kubelet:
+    image: rancher/k8s:v1.8.3-rancher2
+  kubeproxy:
+    image: rancher/k8s:v1.8.3-rancher2
+
+#additionals:
+cluster_name: rke
+
