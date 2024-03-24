@@ -9,13 +9,13 @@ sudo chown vagrant:vagrant /home/vagrant/.ssh/id_rsa*
 mv /tmp/cluster.yml*  /home/vagrant/
 chown vagrant:vagrant /home/vagrant/cluster.yml*
 
-# Deploy keys to rke to connect others as root for initial deployment
-mkdir /root/.ssh
-chmod 700 /root/.ssh/
-chown root:root /root/.ssh
-cp /tmp/id_rsa*  /root/.ssh/id_rsa
-sudo chmod 400 /root/.ssh/id_rsa*
-sudo chown root:root /root/.ssh/id_rsa*
+## Deploy keys to rke to connect others as root for initial deployment
+#mkdir /root/.ssh
+#chmod 700 /root/.ssh/
+#chown root:root /root/.ssh
+#cp /tmp/id_rsa*  /root/.ssh/id_rsa
+#sudo chmod 400 /root/.ssh/id_rsa*
+#sudo chown root:root /root/.ssh/id_rsa*
 
 rm /tmp/id_rsa*
 
