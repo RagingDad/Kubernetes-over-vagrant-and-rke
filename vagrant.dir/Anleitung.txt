@@ -1,0 +1,9 @@
+vagrant box add vagrant box add elegoev/ubuntu-18.04-rke
+
+vagrant box add vagrant box add elegoev/ubuntu-18.04-docker
+
+(insert vagrantfile)
+
+vagrant up
+
+vagrant global-status
