@@ -1,9 +1,13 @@
-vagrant box add vagrant box add elegoev/ubuntu-18.04-rke
+cd into vagrant.dir
 
-vagrant box add vagrant box add elegoev/ubuntu-18.04-docker
-
-(insert vagrantfile)
+vagrant plugin install vagrant-proxyconf
 
 vagrant up
 
-vagrant global-status
+vagrant ssh rke
+
+rke up
+
+mv kube_config_cluster.yml /home/vagrant/.kube/config
+
+kubectl get nodes
