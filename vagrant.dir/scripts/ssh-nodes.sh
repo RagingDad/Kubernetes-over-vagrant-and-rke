@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Deploy keys to kubernetes-nodes to eneble connection from rke as root
+# Deploy keys to kubernetes-nodes to enable connection from rke as root
 mkdir /root/.ssh
 chmod 700 /root/.ssh/
 chown root:root /root/.ssh
